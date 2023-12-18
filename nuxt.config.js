@@ -27,6 +27,20 @@ export default {
   plugins: [
   ],
 
+  axios: {
+    baseURL: process.env.NODE_ENV = 'production' ? 'https://test.com' : 'http://localhost:4025',
+    credentials: false
+  },
+
+  server: {
+    host: '127.0.0.1',
+    port: 3000
+  },
+
+  env: {
+    baseURL: process.env.NODE_ENV === 'production' ? 'https://test.com' : 'http://localhost:3000'
+  },
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
